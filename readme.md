@@ -1,0 +1,5 @@
+- An Analyitics landing page built with HTML and Javascript.
+- The page is responsive and mobile friendly.
+- The page is hosted on github and can be accessed via the link. [CAnalyitics landing page ](https://farismuhovic.github.io/Construction-Company-Landing-Page/)
+- The images are from unsplash
+- Design file is from figma [Design File](https://www.figma.com/community/file/905814382591046401)

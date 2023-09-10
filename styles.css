@@ -1,0 +1,332 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Work+Sans:wght@300;400&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --primary: #ef2a82;
+  --secondary: #172755;
+  --tertiary: #0088f0;
+  --chart-lines: #eeeef6;
+  --font-main-color: #8794ba;
+  --font-secondary-color: #172755;
+}
+
+html {
+  font-family: Roboto;
+  scroll-behavior: smooth;
+}
+
+/* Header Section */
+header {
+  background-image: url(./images/heroimg.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover;
+  padding: 0 5rem;
+  /* overflow hidden just for the main chart picture */
+  overflow: hidden;
+}
+/* Logo */
+.logo {
+  width: 200px;
+  height: auto;
+}
+/* Navigational bar */
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2rem 0;
+}
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.main-nav ul li {
+  padding: 0 0.5rem;
+}
+.main-nav ul a {
+  text-decoration: none;
+  color: var(--font-main-color);
+  transition: 0.3s;
+  padding: 0.25rem;
+}
+.main-nav ul a:hover {
+  color: var(--primary);
+}
+.account-links {
+  margin-left: auto;
+}
+.account-links li:last-child a {
+  border: 1px solid var(--font-main-color);
+  padding: 0.5rem 2.5rem;
+  border-radius: 1rem;
+  transition: 0.3s;
+}
+.account-links li:last-child a:hover {
+  background-color: var(--primary);
+  color: var(--chart-lines);
+  border-color: var(--primary);
+}
+.hamburger-menu {
+  display: none;
+}
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+}
+.text-block {
+  display: flex;
+  flex-direction: column;
+  padding-right: 4rem;
+}
+.text-block h1 {
+  color: var(--chart-lines);
+  font-size: 3rem;
+  width: 20ch;
+}
+.text-block p {
+  font-size: 1.15rem;
+  color: var(--font-main-color);
+  padding: 1.5rem 0;
+}
+.text-block button {
+  width: fit-content;
+  padding: 0.75rem 3.5rem;
+  border-radius: 2rem;
+  border: none;
+  background-color: var(--primary);
+  color: var(--chart-lines);
+  transition: 0.3s;
+  box-shadow: 0px 0px 3px transparent;
+}
+.text-block button:hover {
+  background-color: transparent;
+  box-shadow: 0px 0px 3px var(--primary);
+}
+.charts {
+  position: relative;
+}
+.main-img-hero {
+  overflow: hidden;
+}
+.pie-chart {
+  position: absolute;
+  opacity: 0.8;
+  top: 50%;
+  left: 0;
+  transform: translate(-15%, -50%);
+  transition: 0.25s;
+  overflow: hidden;
+}
+.pie-chart:hover {
+  scale: 1.025;
+  opacity: 1;
+}
+/* Main Section */
+main {
+  padding: 5rem;
+}
+/* Features Section */
+.features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+.features > h2 {
+  font-size: 2rem;
+  color: var(--font-secondary-color);
+}
+.features > p {
+  color: var(--font-main-color);
+  max-width: 110ch;
+}
+.cards {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+.card {
+  padding: 2.5rem;
+  max-width: 30rem;
+  width: fit-content;
+}
+.card h3 {
+  color: var(--font-secondary-color);
+  padding: 0.75rem;
+}
+.card > p {
+  color: var(--font-main-color);
+}
+.svg-icon {
+  filter: grayscale(100%) brightness(40%) sepia(100%) hue-rotate(-50deg)
+    saturate(600%) contrast(0.8);
+  width: 4rem;
+  height: 4rem;
+}
+/* Info About the Charts Section */
+.charts-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  place-items: center;
+}
+.charts-info img {
+  width: 100%;
+}
+.charts-info img:nth-child(odd) {
+  transform: translateX(1.75rem);
+}
+.charts-info img:nth-child(even) {
+  transform: translateX(-1.75rem);
+}
+.charts-info figcaption {
+  text-align: left;
+}
+.charts-info figcaption h2 {
+  color: var(--font-secondary-color);
+  font-size: 1.75rem;
+  max-width: 16ch;
+  padding: 1rem 0;
+}
+.charts-info figcaption p {
+  color: var(--font-main-color);
+  max-width: 40ch;
+}
+/* Footer and Pricing Plan bg image wrapper */
+.bg-wrapper {
+  background-image: url(./images/footerimg.png);
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  padding-top: 10rem;
+}
+/* Pricing Plan Section */
+.pricing-plans {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0;
+  height: 750px;
+}
+.pricing-plans h2 {
+  color: var(--chart-lines);
+  font-size: 2rem;
+}
+.pricing-plans p {
+  color: var(--font-main-color);
+  max-width: 75ch;
+  text-align: center;
+  padding: 1rem 0;
+}
+.plan-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+.plan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #0b194685;
+  padding: 2rem 3rem;
+  gap: 0.5rem;
+  border-radius: 1rem;
+  transition: 0.3s;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.493);
+}
+.plan h3 {
+  color: var(--chart-lines);
+  font-size: 1.5rem;
+}
+.plan h2 {
+  color: var(--chart-lines);
+  font-size: 3rem;
+}
+.plan h2 span {
+  font-size: 1.5rem;
+}
+.plan button {
+  width: fit-content;
+  padding: 0.5rem 3rem;
+  background-color: transparent;
+  color: var(--chart-lines);
+  border: 1px solid var(--font-main-color);
+  border-radius: 5rem;
+  transition: 0.25s;
+}
+.plan.best {
+  background-color: white;
+  scale: 1.05;
+}
+.plan.best h3 {
+  color: black;
+}
+.plan.best h2 {
+  color: black;
+}
+.plan.best button {
+  background-color: var(--primary);
+  color: var(--chart-lines);
+  border: none;
+}
+.plan:hover,
+.plan.best:hover {
+  scale: 1.1;
+}
+.plan:hover button {
+  background-color: var(--primary);
+  color: var(--chart-lines);
+  border: none;
+}
+/* Footer Section */
+footer {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  place-items: center;
+  margin: 0rem 5rem;
+  padding: 1rem;
+  border-top: 1px solid var(--font-main-color);
+}
+footer .logo {
+  width: 200px;
+  height: 40px;
+  margin-right: auto;
+}
+.social-media-links {
+  margin-left: auto;
+}
+footer ul {
+  display: flex;
+  gap: 0.75rem;
+  list-style: none;
+  font-size: 1.15rem;
+}
+
+footer ul a {
+  text-decoration: none;
+  color: var(--font-main-color);
+}
+/* Responsive Design / Media Queries */
+
+/*  Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+}
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+}
+/*  Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+}
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+}
