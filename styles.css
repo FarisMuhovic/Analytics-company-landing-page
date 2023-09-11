@@ -147,6 +147,7 @@ main {
 .features > p {
   color: var(--font-main-color);
   max-width: 110ch;
+  width: 100%;
 }
 .cards {
   display: flex;
@@ -194,6 +195,7 @@ main {
   color: var(--font-secondary-color);
   font-size: 1.75rem;
   max-width: 16ch;
+  width: 100%;
   padding: 1rem 0;
 }
 .charts-info figcaption p {
@@ -215,7 +217,7 @@ main {
   justify-content: center;
   align-items: center;
   margin: 3rem 0;
-  height: 750px;
+  height: fit-content;
 }
 .pricing-plans h2 {
   color: var(--chart-lines);
@@ -224,12 +226,14 @@ main {
 .pricing-plans p {
   color: var(--font-main-color);
   max-width: 75ch;
+  width: 100%;
   text-align: center;
   padding: 1rem 0;
 }
 .plan-cards {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 2rem;
   margin: 2rem 0;
 }
@@ -320,13 +324,129 @@ footer ul a {
 
 /*  Large devices (desktops, less than 1200px) */
 @media (max-width: 1199.98px) {
+  /* Hero Section */
+  .text-block {
+    width: 50ch;
+  }
+  .text-block h1 {
+    width: 12ch;
+  }
 }
 /* Medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) {
+  /* Header */
+  header {
+    padding: 0 2rem;
+  }
+  /* Navbar */
+  .main-nav .nav-links,
+  .sign-up {
+    display: none;
+  }
+  .hamburger-menu {
+    display: inline;
+    font-size: 2rem;
+    color: var(--font-main-color);
+    padding: 0.5rem;
+    cursor: pointer;
+  }
+  /* Hero Section */
+  .hero {
+    flex-direction: column-reverse;
+    padding: 0 2rem 6rem 2rem;
+  }
+  .text-block {
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+    width: 100%;
+  }
+  .text-block h1 {
+    width: 100%;
+    font-size: 2.5rem;
+  }
+  .text-block p {
+    padding: 0;
+  }
+  .text-block button {
+    max-width: 350px;
+    width: 100%;
+  }
+  .pie-chart {
+    display: none;
+  }
+  .main-img-hero {
+    overflow: visible;
+    width: 100%;
+    height: auto;
+  }
+  /* Main Section */
+  main {
+    padding: 2rem;
+  }
+  /* Features Section */
+  .charts-info {
+    gap: 1rem;
+  }
+  .charts-info img:nth-child(odd) {
+    transform: translateX(0);
+  }
+  .charts-info img:nth-child(even) {
+    transform: translateX(0);
+  }
+  /* Footer */
+  footer {
+    margin: 0;
+    grid-template-columns: 1fr 1fr;
+  }
+  footer .footer-nav {
+    display: none;
+  }
 }
+
 /*  Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) {
+  /* fix
+    features section
+    plans
+    */
+  /* Features Section */
+  .cards {
+    flex-direction: column;
+  }
+  /* Charts Section */
+  .charts-info {
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+  .charts-info figcaption {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .charts-info figcaption h2 {
+    text-align: center;
+  }
+  .charts-info img:nth-child(even) {
+    order: 1;
+  }
+  .charts-info img:nth-child(odd) {
+    order: 3;
+  }
+  .plan-cards {
+    flex-direction: column;
+  }
 }
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
+  .logo {
+    width: 140px;
+  }
+  footer .logo {
+    width: 140px;
+    height: 25px;
+  }
 }
