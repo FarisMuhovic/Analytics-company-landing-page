@@ -40,7 +40,8 @@ header {
   justify-content: flex-start;
   padding: 2rem 0;
 }
-.main-nav ul {
+.nav-links,
+.account-links {
   list-style: none;
   display: flex;
   align-items: center;
@@ -72,7 +73,10 @@ header {
   color: var(--chart-lines);
   border-color: var(--primary);
 }
-.hamburger-menu {
+.hamburger {
+  display: none;
+}
+.sign-up-mobile {
   display: none;
 }
 /* Hero Section */
@@ -339,17 +343,58 @@ footer ul a {
     padding: 0 2rem;
   }
   /* Navbar */
-  .main-nav .nav-links,
+  .nav-links,
   .sign-up {
     display: none;
   }
-  .hamburger-menu {
-    display: inline;
-    font-size: 2rem;
+  .nav-links-opened {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 9;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 3rem;
+    background-color: rgba(255, 255, 255, 0.904);
+    backdrop-filter: blur(8px);
+  }
+  .sign-up-mobile {
+    display: block;
+  }
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
     color: var(--font-main-color);
     padding: 0.5rem;
     cursor: pointer;
+    z-index: 99;
   }
+
+  .hamburger.ham-active .bar {
+    background-color: var(--primary);
+  }
+  .hamburger.ham-active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.ham-active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.ham-active .bar:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px) translateX(7px);
+  }
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    transition: 0.3s;
+  }
+
   /* Hero Section */
   .hero {
     flex-direction: column-reverse;
